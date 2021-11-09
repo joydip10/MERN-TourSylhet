@@ -9,7 +9,7 @@ const ManageEvents = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:500/orders')
+        fetch('https://frozen-escarpment-17880.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
@@ -25,7 +25,7 @@ const ManageEvents = () => {
         else {
             newEvent.status = "pending";
         }
-        fetch(`http://localhost:500/orders/${id}`, {
+        fetch(`https://frozen-escarpment-17880.herokuapp.com/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'
@@ -49,7 +49,7 @@ const ManageEvents = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Confirm to proceed in the deletion of this event!');
         if (proceed) {
-            fetch(`http://localhost:500/orders/${id}`, {
+            fetch(`https://frozen-escarpment-17880.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

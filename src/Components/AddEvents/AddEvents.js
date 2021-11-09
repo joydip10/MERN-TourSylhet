@@ -5,7 +5,7 @@ import axios from "axios";
 const AddEvents = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        axios.post('http://localhost:500/events',data)
+        axios.post('https://frozen-escarpment-17880.herokuapp.com/events',data)
         .then(function (response){
             if(response.data.insertedId){
                 alert('A event has been successfully inserted');

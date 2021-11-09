@@ -10,7 +10,7 @@ const MyEvents = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:500/orders/${user.email}`)
+        fetch(`https://frozen-escarpment-17880.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setEvents(data);
@@ -21,7 +21,7 @@ const MyEvents = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to proceed to deleting a tour plan!');
         if (proceed) {
-            fetch(`http://localhost:500/orders/${id}`, {
+            fetch(`https://frozen-escarpment-17880.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

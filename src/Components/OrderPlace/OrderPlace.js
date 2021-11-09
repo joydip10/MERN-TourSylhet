@@ -10,7 +10,7 @@ const OrderPlace = () => {
     const [event, setEvent] = useState({});
     const {user} = UseAuth();
     useEffect(() => {
-        fetch(`http://localhost:500/events/${id}`)
+        fetch(`https://frozen-escarpment-17880.herokuapp.com/events/${id}`)
             .then(res => res.json())
             .then(data => {
                 setEvent(data);
@@ -22,7 +22,7 @@ const OrderPlace = () => {
         data.title=event.title;
         data.desc=event.desc;
         data.status="pending";
-        axios.post('http://localhost:500/orders',data)
+        axios.post('https://frozen-escarpment-17880.herokuapp.com/orders',data)
         .then(function(res){
             if(res.data.insertedId){
                 alert(`Trip to ${event.title} has been successfully booked on the app`);

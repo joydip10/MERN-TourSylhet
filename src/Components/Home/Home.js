@@ -10,17 +10,17 @@ const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:500/events')
+        fetch('https://frozen-escarpment-17880.herokuapp.com/events')
             .then(res => res.json())
             .then(data => {
                 setEvents(data);
             })
-        fetch('http://localhost:500/hotels')
+        fetch('https://frozen-escarpment-17880.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => {
                 setHotels(data);
             })
-        fetch('http://localhost:500/restaurants')
+        fetch('https://frozen-escarpment-17880.herokuapp.com/restaurants')
             .then(res => res.json())
             .then(data => {
                 setRestaurants(data);
