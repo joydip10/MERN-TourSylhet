@@ -1,4 +1,4 @@
-# Tour Dé Sylhet Webb Application
+# Tour Dé Sylhet Web Application
 
 ## Livesite link: https://tour-de-sylhet.netlify.app/
 
